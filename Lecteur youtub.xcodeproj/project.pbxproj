@@ -7,17 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0475738F20BEB8310002BFC2 /* TableauController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475738E20BEB8310002BFC2 /* TableauController.swift */; };
+		0475739220BEDE860002BFC2 /* Chanson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475739120BEDE860002BFC2 /* Chanson.swift */; };
 		047CA54420BD5155007FFEBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047CA54320BD5155007FFEBB /* AppDelegate.swift */; };
-		047CA54620BD5155007FFEBB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047CA54520BD5155007FFEBB /* ViewController.swift */; };
 		047CA54920BD5155007FFEBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047CA54720BD5155007FFEBB /* Main.storyboard */; };
 		047CA54B20BD5156007FFEBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 047CA54A20BD5156007FFEBB /* Assets.xcassets */; };
 		047CA54E20BD5156007FFEBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047CA54C20BD5156007FFEBB /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0475738E20BEB8310002BFC2 /* TableauController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableauController.swift; sourceTree = "<group>"; };
+		0475739120BEDE860002BFC2 /* Chanson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chanson.swift; sourceTree = "<group>"; };
 		047CA54020BD5155007FFEBB /* Lecteur youtub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lecteur youtub.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		047CA54320BD5155007FFEBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		047CA54520BD5155007FFEBB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		047CA54820BD5155007FFEBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		047CA54A20BD5156007FFEBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		047CA54D20BD5156007FFEBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +37,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0475738D20BEB7F30002BFC2 /* Contoller */ = {
+			isa = PBXGroup;
+			children = (
+				0475738E20BEB8310002BFC2 /* TableauController.swift */,
+			);
+			path = Contoller;
+			sourceTree = "<group>";
+		};
+		0475739020BEDE650002BFC2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0475739120BEDE860002BFC2 /* Chanson.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		047CA53720BD5155007FFEBB = {
 			isa = PBXGroup;
 			children = (
@@ -54,8 +72,9 @@
 		047CA54220BD5155007FFEBB /* Lecteur youtub */ = {
 			isa = PBXGroup;
 			children = (
+				0475739020BEDE650002BFC2 /* Model */,
+				0475738D20BEB7F30002BFC2 /* Contoller */,
 				047CA54320BD5155007FFEBB /* AppDelegate.swift */,
-				047CA54520BD5155007FFEBB /* ViewController.swift */,
 				047CA54720BD5155007FFEBB /* Main.storyboard */,
 				047CA54A20BD5156007FFEBB /* Assets.xcassets */,
 				047CA54C20BD5156007FFEBB /* LaunchScreen.storyboard */,
@@ -135,8 +154,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				047CA54620BD5155007FFEBB /* ViewController.swift in Sources */,
+				0475738F20BEB8310002BFC2 /* TableauController.swift in Sources */,
 				047CA54420BD5155007FFEBB /* AppDelegate.swift in Sources */,
+				0475739220BEDE860002BFC2 /* Chanson.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
