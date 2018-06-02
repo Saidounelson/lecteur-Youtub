@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a6j-Tj-mgR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a6j-Tj-mgR">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -21,6 +21,43 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NjQ-c9-6aW">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChansonCell" rowHeight="169" id="8bc-85-b8c" customClass="ChansonCell" customModule="Lecteur_youtub" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="169"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8bc-85-b8c" id="EiX-c1-KyO">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="168.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="CJN-gQ-ALG">
+                                                    <rect key="frame" x="8" y="9.5" width="150" height="150"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="150" id="LgW-3W-i80"/>
+                                                        <constraint firstAttribute="height" constant="150" id="fg2-X7-hJU"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cX4-ty-amP">
+                                                    <rect key="frame" x="166" y="5" width="209" height="158.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="CJN-gQ-ALG" firstAttribute="leading" secondItem="EiX-c1-KyO" secondAttribute="leading" constant="8" id="2Ig-3h-Ob9"/>
+                                                <constraint firstAttribute="bottom" secondItem="cX4-ty-amP" secondAttribute="bottom" constant="5" id="BML-e5-AVV"/>
+                                                <constraint firstItem="cX4-ty-amP" firstAttribute="top" secondItem="EiX-c1-KyO" secondAttribute="top" constant="5" id="S1F-bi-I87"/>
+                                                <constraint firstItem="CJN-gQ-ALG" firstAttribute="centerY" secondItem="EiX-c1-KyO" secondAttribute="centerY" id="T7N-hM-dbI"/>
+                                                <constraint firstItem="cX4-ty-amP" firstAttribute="leading" secondItem="CJN-gQ-ALG" secondAttribute="trailing" constant="8" id="TKz-o8-FR6"/>
+                                                <constraint firstAttribute="trailing" secondItem="cX4-ty-amP" secondAttribute="trailing" id="ed9-p7-1Jd"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="artisteEtTitreLabel" destination="cX4-ty-amP" id="JLp-yP-PKs"/>
+                                            <outlet property="minuature" destination="CJN-gQ-ALG" id="wkm-jX-vbV"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -39,7 +76,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1056.8" y="118.29085457271366"/>
+            <point key="canvasLocation" x="894" y="-45"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bZ8-Tf-RXp">
@@ -57,7 +94,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pcm-H0-Ltq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="206" y="118"/>
+            <point key="canvasLocation" x="-338" y="118"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="960" height="553"/>
+    </resources>
 </document>
