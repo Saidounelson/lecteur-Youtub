@@ -14,6 +14,7 @@ class TableauController: UIViewController, UITableViewDelegate, UITableViewDataS
     
     var chansons = [Chanson]()
     let identifiantCell = "ChansonCell"
+    let identifiantSegue = "versVideo"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +43,20 @@ class TableauController: UIViewController, UITableViewDelegate, UITableViewDataS
         return 100
     }
     
+    //Methode qui permet de nous rediriger vers la ligne selectionne
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let chanson = chansons[indexPath.row]
+        performSegue(withIdentifier: identifiantSegue, sender: chanson)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == identifiantSegue {
+            if let nouveauController = segue.destination as? VideoController {
+               nouveauController.chanson = sender as? Chanson
+            }
+        }
+    }
     func ajouterChanson(){
         chansons = [Chanson]()
         let santana = Chanson(artiste: "Alonzo", titre: "Santana", code: "J7GL8kO-DBw")
