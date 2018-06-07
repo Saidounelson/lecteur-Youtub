@@ -20,6 +20,9 @@ class TableauController: UIViewController, UITableViewDelegate, UITableViewDataS
         tableView.delegate = self
         tableView.dataSource = self
         ajouterChanson()
+        
+        //Titre dans le Navigation bar
+        title = "Mes chanson preferes"
     }
 
 //Une methode qui permet de retourner le nombre de ligne du tableau
@@ -36,7 +39,7 @@ class TableauController: UIViewController, UITableViewDelegate, UITableViewDataS
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
+        return 100
     }
     
     func ajouterChanson(){
